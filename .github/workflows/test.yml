@@ -28,11 +28,14 @@ jobs:
       DB_NAME: weather_data
       DB_USER: weather_user
       DB_PASS: 0000
-      DB_HOST: postgres     # cheia problemei
+      DB_HOST: postgres
       DB_PORT: 5432
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Map postgres hostname manually
+        run: echo "127.0.0.1 postgres" | sudo tee -a /etc/hosts
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -49,7 +52,7 @@ jobs:
       - name: Wait for PostgreSQL to be ready
         run: |
           for i in {1..10}; do
-            nc -z postgres 5432 && echo "Postgres ready" && break
+            pg_isready -h postgres -U weather_user -d weather_data && echo "Postgres ready" && break
             echo "Waiting for Postgres..."
             sleep 2
           done
