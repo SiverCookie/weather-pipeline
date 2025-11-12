@@ -37,7 +37,7 @@ jobs:
           DB_NAME: weather_data
           DB_USER: weather_user
           DB_PASS: 0000
-          DB_HOST: localhost
+          DB_HOST: postgress
           DB_PORT: 5432
         run: pytest -q
 
