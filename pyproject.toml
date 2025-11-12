@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "weather-pipeline"
+version = "0.1.0"
+description = "Weather data pipeline"
+requires-python = ">=3.8"
+dependencies = [
+    "requests",
+    "psycopg",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]

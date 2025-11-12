@@ -1,0 +1,12 @@
+pyproject.toml
+src/__init__.py
+src/db.py
+src/fetch_data.py
+src/main.py
+src/weather_pipeline.egg-info/PKG-INFO
+src/weather_pipeline.egg-info/SOURCES.txt
+src/weather_pipeline.egg-info/dependency_links.txt
+src/weather_pipeline.egg-info/top_level.txt
+tests/test_db.py
+tests/test_fetch.py
+tests/test_insert.py
