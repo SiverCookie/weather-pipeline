@@ -1,0 +1,11 @@
+## 📦 **requirements.txt**
+
+Include all the runtime dependencies your project actually uses — here’s a clean, minimal version:
+
+```txt
+# Core dependencies
+requests==2.32.3
+psycopg==3.2.2
+
+# Testing
+pytest==8.3.2
