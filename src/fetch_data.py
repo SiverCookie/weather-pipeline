@@ -9,6 +9,8 @@ CITY = "Iasi"
 URL = f"https://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={API_KEY}&units=metric"
 
 def fetch_weather():
+    if not API_KEY:
+        raise RuntimeError("Missing OPENWEATHER_API_KEY environment variable")
     response = requests.get(URL, timeout=10)
     response.raise_for_status()
     data = response.json()
