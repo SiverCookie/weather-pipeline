@@ -10,6 +10,7 @@ requires-python = ">=3.8"
 dependencies = [
     "requests",
     "psycopg",
+    "dotenv",
 ]
 
 [tool.setuptools.packages.find]

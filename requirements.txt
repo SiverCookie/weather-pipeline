@@ -4,8 +4,9 @@ Include all the runtime dependencies your project actually uses — here’s a c
 
 ```txt
 # Core dependencies
-requests==2.32.3
-psycopg==3.2.2
+requests==2.32.5
+psycopg==3.2.12
+dotenv==1.2.1
 
 # Testing
-pytest==8.3.2
+pytest==9.0.0
