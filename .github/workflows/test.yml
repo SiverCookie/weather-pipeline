@@ -59,8 +59,7 @@ jobs:
 
       - name: Run tests
         env:
-          WEATHER_API_KEY: $
-{{ secrets.WEATHER_API_KEY }}
+          WEATHER_API_KEY: ${{ secrets.WEATHER_API_KEY }}
         run: |
           source venv/bin/activate
           pytest -q
